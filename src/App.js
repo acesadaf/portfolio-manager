@@ -12,31 +12,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
-          <div className="container">
-            <a className="navbar-brand" href="#">
-              <img src={Logo} width="30" height="30" alt="cant find"></img>
-            </a>
-            <Link className="navbar-brand" to={"/sign-in"}>
-              Portfolio Manager
-            </Link>
-            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/sign-in"}>
-                    Login
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/sign-up"}>
-                    Sign up
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
         <div className="auth-wrapper">
           <div className="auth-inner">
             <Switch>
