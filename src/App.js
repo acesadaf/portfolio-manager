@@ -7,6 +7,7 @@ import Login from "./components/login.component";
 import SignUp from "./components/signup.component";
 import Logo from "./iconfinder_briefcase_1608586.svg";
 import MainMenu from "./components/MainMenu";
+import addStock from "./components/addStock";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Route path="/sign-in" component={Login} />
               <Route path="/sign-up" component={SignUp} />
               <Route path="/MainMenu" component={MainMenu} />
+              <Route path="/add-stock" component={addStock} />
             </Switch>
           </div>
         </div>
