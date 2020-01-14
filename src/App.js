@@ -8,6 +8,7 @@ import SignUp from "./components/signup.component";
 import Logo from "./iconfinder_briefcase_1608586.svg";
 import MainMenu from "./components/MainMenu";
 import addStock from "./components/addStock";
+import deleteStock from "./components/deleteStock";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/sign-up" component={SignUp} />
               <Route path="/MainMenu" component={MainMenu} />
               <Route path="/add-stock" component={addStock} />
+              <Route path="/delete-stock" component={deleteStock} />
             </Switch>
           </div>
         </div>
