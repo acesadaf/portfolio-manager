@@ -33,13 +33,13 @@ class addStock extends Component {
       },
       body: JSON.stringify(stockData)
     };
-    //const proxyurl = "https://cors-anywhere.herokuapp.com/";
+
     console.log(putMethod);
     const url = "https://localhost:44340/api/stocks/";
     const finalUrl = url + ticker;
     fetch(finalUrl, putMethod)
       .then(response => response.json())
-      .then(data => console.log(data)) // Manipulate the data retrieved back, if we want to do something with it
+      .then(data => console.log(data))
       .catch(err => console.log(err));
   }
   handleChange(event) {

@@ -36,15 +36,6 @@ class deleteStock extends Component {
     console.log(isSelect);
     console.log(row.id);
     this.selected = row.id;
-    // if (isSelect) {
-    //   this.setState(() => ({
-    //     selected: [...this.state.selected, row.id]
-    //   }));
-    // } else {
-    //   this.setState(() => ({
-    //     selected: this.state.selected.filter(x => x !== row.id)
-    //   }));
-    // }
 
     console.log(this.selected);
   };
@@ -62,16 +53,16 @@ class deleteStock extends Component {
             Company: data[i].companyName,
             Qty: data[i].quantity,
             currentPrice: data[i].currentPrice,
-            percentChange:
+            percentChange: (
               ((data[i].currentPrice - data[i].purchasePrice) /
                 data[i].purchasePrice) *
-              100,
+              100
+            ).toFixed(2),
             id: i,
             purchasePrice: data[i].purchasePrice,
             purchaseDate: data[i].purchaseDate
           };
-          //console.log(data[i].companyName);
-          //console.log(data[i].currentPrice);
+
           console.log(data);
           console.log(x[i].purchaseDate);
         }
@@ -99,15 +90,11 @@ class deleteStock extends Component {
       },
       body: JSON.stringify(stockData)
     };
-    //const proxyurl = "https://cors-anywhere.herokuapp.com/";
     console.log(delMethod);
     const finalUrl = "https://localhost:44340/api/stocks/";
     fetch(finalUrl, delMethod).then(response => {
       this.fetchStocks();
     });
-    // .then(data => console.log(data)) // Manipulate the data retrieved back, if we want to do something with it
-    // .catch(err => console.log(err));
-    //this.setState({ refreshCount: this.state.refreshCount + 1 });
   }
 
   componentWillMount() {
